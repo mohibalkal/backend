@@ -1,0 +1,30 @@
+{
+    "deployment_configs": {
+        "production": {
+            "env_vars": {
+                "DATABASE_URL": {
+                    "value": "postgresql://neondb_owner:npg_ASmX5QGjVna7@ep-orange-shadow-ailltjsr-pooler.c-4.us-east-1.aws.neon.tech/neondb?sslmode=require"
+                },
+                "TMDB_API_KEY": {
+                    "value": "18f5b196262c331e2e29bcbe652ffdba"
+                },
+                "CRYPTO_SECRET": {
+                    "value": "0abrp7mkZYEVSyuQhlMAPB3HsJfRLi16"
+                }
+            }
+        },
+        "preview": {
+            "env_vars": {
+                "DATABASE_URL": {
+                    "value": "postgresql://neondb_owner:npg_ASmX5QGjVna7@ep-orange-shadow-ailltjsr-pooler.c-4.us-east-1.aws.neon.tech/neondb?sslmode=require"
+                },
+                "TMDB_API_KEY": {
+                    "value": "18f5b196262c331e2e29bcbe652ffdba"
+                },
+                "CRYPTO_SECRET": {
+                    "value": "0abrp7mkZYEVSyuQhlMAPB3HsJfRLi16"
+                }
+            }
+        }
+    }
+}
