@@ -15,6 +15,26 @@ export default defineNitroConfig({
     tasks: true,
     wasm: true,
   },
+  rollupConfig: {
+    esbuild: {
+      target: 'esnext',
+    },
+  },
+  hooks: {
+    'rollup:options': (options) => {
+      options.plugins = options.plugins || [];
+      options.plugins.push({
+        name: 'prisma-wasm-resolver',
+        resolveId(id) {
+          if (id.includes('query_compiler_fast_bg.wasm?module')) {
+            // Strip the ?module suffix for resolution
+            return id.replace('?module', '');
+          }
+          return null;
+        },
+      });
+    },
+  },
   scheduledTasks: {
     // Daily cron jobs (midnight)
     '0 0 * * *': ['jobs:clear-metrics:daily'],
