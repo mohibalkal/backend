@@ -5,7 +5,6 @@ export default defineNitroConfig({
   preset: 'cloudflare-pages',
   compatibilityDate: '2025-03-05',
   externals: {
-    inline: ['@prisma/client', '.prisma/client'],
     external: ['pg-native'],
   },
   experimental: {
