@@ -2,7 +2,7 @@
   "private": true,
   "version": "2.1.4",
   "scripts": {
-    "build": "DATABASE_URL=\"postgresql://dummy:dummy@localhost:5432/dummy\" prisma generate && nitro build",
+    "build": "DATABASE_URL=\"postgresql://postgres:password@localhost:5432/postgres\" prisma generate && nitro build",
     "dev": "nitro dev",
     "prepare": "nitro prepare",
     "preview": "node .output/server/index.mjs"

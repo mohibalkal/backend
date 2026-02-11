@@ -1,5 +1,5 @@
 export default {
     datasource: {
-        url: process.env.DATABASE_URL || 'postgresql://dummy:dummy@localhost:5432/dummy',
+        url: process.env.DATABASE_URL || 'postgresql://postgres:password@localhost:5432/postgres',
     },
 };
