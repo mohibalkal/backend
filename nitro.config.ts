@@ -4,8 +4,11 @@ export default defineNitroConfig({
   srcDir: 'server',
   preset: 'cloudflare-pages',
   compatibilityDate: '2025-03-05',
+  alias: {
+    'pg-native': 'unenv/runtime/mock/proxy',
+  },
   externals: {
-    external: ['pg-native'],
+    inline: ['pg'],
   },
   experimental: {
     asyncContext: true,
